@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+     crossorigin="anonymous">
+    <link rel="stylesheet" href ="style.css"/>
+
+    <title>Resume Generator</title>
+</head>
+<body>
+  <!--HTML CODE-->
+
+
+<div class="container" id="cv-form">
+  <h2 class="text-center my-2">RESUME GENERATOR</h2>
+  <p class="text-center">By Anil Kapadi</p>
+
+
+<div class="row">
+<div class="col-md-6">
+  <!--first col-->
+  <h4 class="text-center my-2">Personal Information</h4>
+
+
+  <div class="form-group">
+    <label for="nameField">Your Name</label>
+    <input type="text"
+     id="nameField"
+     placeholder="Enter Here"
+    class="form-control"
+    />
+  </div>
+
+  <div class="form-group mt-2">
+    <label for="contactField">Your Contact</label>
+    <input type="text"
+     id="contactField"
+     placeholder="Enter Here"
+    class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="addressField">Your Address</label>
+    <textarea
+    type="text"
+     id="addressField"
+     placeholder="Enter Here"
+    class="form-control">
+  </textarea>
+  </div>
+
+<p class="text-secondary my-3">Important Links</p>
+
+<div class="form-group mt-2">
+  <label for="ldField">linkdin</label>
+  <input type="text"
+   id="ldField"
+   placeholder="Enter Here"
+  class="form-control"
+  />
+</div>
+
+<div class="form-group mt-2">
+  <label for="ghField">Github</label>
+  <input type="text"
+   id="ghField"
+   placeholder="Enter Here"
+  class="form-control"
+  />
+</div>
+
+<div class="form-group mt-2">
+  <label for="igField">Instagram</label>
+  <input type="text"
+   id="igField"
+   placeholder="Enter Here"
+  class="form-control"
+  />
+</div>
+
+</div>
+<div class="col-md-6">
+  <!--Second Coloum-->
+<h4 class="text-center my-2">Proffetional Information</h4>
+
+<div class="form-group my-2">
+  <label for="">Objective</label>
+  <textarea 
+  id="objectiveField"
+  rows="5"
+  placeholder="Enter Here"
+  class="form-control">
+</textarea>
+</div>
+
+<div class="form-group my-3" id="we">
+  <label for="">Work Experiance</label>
+  <textarea 
+  placeholder="Enter Here"
+  class="form-control weField">
+</textarea>
+
+<div class="container text-center mt-3" id="weAddButton">
+  <button onclick="addExField()" class="btn btn-primary btn">Add</button>
+</div>
+</div>
+
+<div class="form-group my-2" id="aq">
+  <label for="">Acadamic Education</label>
+  <textarea placeholder="Enter Here"
+  class="form-control aqField">
+</textarea>
+
+<div class="container text-center mt-3" id="aqAddButton">
+  <button onclick="addaqField()" class="btn btn-primary btn">Add</button>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="container mt-3 text-center">
+  <button onclick="generatCV()" class="btn background">Print CV</button>
+       </div>
+
+</div>
+
+
+<!--CV Templet-->
+<div class="container" id="cv-templete">
+
+  <div class="row">
+
+<div class="col-md-4 text-center background">
+  <!--First coloum-->
+
+  <img src="https://st.depositphotos.com/2101611/3925/v/950/depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg"
+  alt=""
+  class="img-fluid myimg"
+  />
+
+  <div class="container">
+    <pi id="nameT1">Anil Uttam Kapadi</p>
+    <p id="contactT">+91 7066353116</p>
+    <p id="addressT">At-Khambe,Tel-Samgmanre,Ahmadnagar</p>
+
+    <hr/>
+
+    <p id="linkT"><a href="#1">https://www.linkdin.com.anil</a></p>
+
+    <p id="gitT"><a href="#1">https://www.Github.com.anil</a></p>
+
+    <p id="instaT"><a href="#1">https://www.Instagram.com.</a></p>
+    
+  </div>
+
+</div>
+
+<!---------------------------------------------------------------------->
+
+
+<div class="col-md-8 py-5">
+  <!--Second colom-->
+
+<h1 id="nameT2" class="text-center" style="font-weight: 900">Anil Uttam Kapadi</h1>
+
+<!--Objective Card-->
+
+<div class="card mt-4">
+  <div class="card-header background">
+<h3>Objective</h3>
+  </div>
+  <div class="card-body">
+<p id="objectiveT">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore tenetur unde quo repellat atque et quia ex saepe aperiam!</p>
+  </div>
+</div>
+
+<!--Work Experiance-->
+
+<div class="card mt-4">
+  <div class="card-header background">
+<h3>Work Experiance</h3>
+  </div>
+  <div class="card-body">
+   <ul id="weT">
+    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore</li>
+
+    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore</li>
+
+    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore</li>
+   </ul>
+  </div>
+</div>
+
+<!--acadamic Qualification-->
+<div class="card mt-4">
+  <div class="card-header background">
+<h3>Acadamic qualification</h3>
+  </div>
+  <div class="card-body">
+    <ul id="aqT">
+      <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore</li>
+  
+      <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore</li>
+  
+      <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis labore</li>
+     </ul>
+    </div>
+  </div>
+     <div class="container mt-3 text-center">
+<button onclick="printCV()" class="btn background">Print CV</button>
+     </div>
+</div>
+</div>
+</div>
+
+
+
+<!--JAVASCRIPT CODE-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" 
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src ="script.js"> </script>
+</body>
+</html>
